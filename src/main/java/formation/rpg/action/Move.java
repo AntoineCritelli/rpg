@@ -12,23 +12,15 @@ public class Move implements Action {
      */
     @Override
     public void doo(World world) {
-        String roomChoice = "";
+        StringBuilder roomChoice = new StringBuilder();
         Room[] neighbors = world.getNeighbors(world.getPlayerRoom());
         for (int i=0;i<neighbors.length;i++) {
             if (neighbors[i] != null)
                 switch (i) {
-                    case 0:
-                        roomChoice += "Nord : 0 ";
-                        break;
-                    case 1:
-                        roomChoice += "EST : 1 ";
-                        break;
-                    case 2:
-                        roomChoice += "SUD : 2 ";
-                        break;
-                    case 3:
-                        roomChoice += "OUEST : 3 ";
-                        break;
+                    case 0 -> roomChoice.append("Nord : 0 ");
+                    case 1 -> roomChoice.append("EST : 1 ");
+                    case 2 -> roomChoice.append("SUD : 2 ");
+                    case 3 -> roomChoice.append("OUEST : 3 ");
                 }
         }
         System.out.println(roomChoice);

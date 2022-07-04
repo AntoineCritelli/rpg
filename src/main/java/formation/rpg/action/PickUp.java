@@ -78,7 +78,7 @@ public class PickUp implements Action{
 
     }
 
-    private class CustomHandlerEvent implements EventHandler<MouseEvent> {
+    private static class CustomHandlerEvent implements EventHandler<MouseEvent> {
 
         Item item;
         World world;
@@ -111,7 +111,7 @@ public class PickUp implements Action{
         }
     }
 
-    private class CancelItem extends Item {
+    private static class CancelItem extends Item {
 
         public CancelItem(String name) {
             super(name);

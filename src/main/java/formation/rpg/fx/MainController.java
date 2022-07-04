@@ -47,7 +47,7 @@ public class MainController {
         moveAction.dooInterface(this.world, this);
         this.afficherRoom();
         this.actions();
-    };
+    }
 
     @FXML
     protected void onGoEast() {
@@ -56,7 +56,7 @@ public class MainController {
         moveAction.dooInterface(this.world, this);
         this.afficherRoom();
         this.actions();
-    };
+    }
 
     @FXML
     protected void onGoSouth() {
@@ -65,7 +65,7 @@ public class MainController {
         moveAction.dooInterface(this.world, this);
         this.afficherRoom();
         this.actions();
-    };
+    }
 
     @FXML
     protected void onGoWest() {
@@ -74,7 +74,7 @@ public class MainController {
         moveAction.dooInterface(this.world, this);
         this.afficherRoom();
         this.actions();
-    };
+    }
 
     @FXML
     protected void startTheGame() {
@@ -103,17 +103,10 @@ public class MainController {
         for (int i=0;i<neighbors.length;i++) {
             if (world.getPlayerRoom().getEnemy() != null || neighbors[i] == null)
                 switch (i) {
-                    case 0 :
-                        northButton.setDisable(true);
-                        break;
-                    case 1 :
-                        eastButton.setDisable(true);
-                        break;
-                    case 2 :
-                        southButton.setDisable(true);
-                        break;
-                    case 3 :
-                        westButton.setDisable(true);
+                    case 0 -> northButton.setDisable(true);
+                    case 1 -> eastButton.setDisable(true);
+                    case 2 -> southButton.setDisable(true);
+                    case 3 -> westButton.setDisable(true);
                 }
         }
     }
@@ -139,7 +132,7 @@ public class MainController {
     }
 
 
-    private class CustomHandlerEvent implements EventHandler<MouseEvent> {
+    private static class CustomHandlerEvent implements EventHandler<MouseEvent> {
 
         Action action;
         World world;

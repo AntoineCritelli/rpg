@@ -109,7 +109,7 @@ public class Room {
         String output = "";
         output += "Votre position : " + this.position.toString() + "\n";
         output += (this.items.size() > 0)?this.itemsToString()+"\n":"Il n'y a pas d'item au sol\n";
-        output += (this.personnages[1] != null)?this.personnages[1].toString()+"\n":"Il n'y a pas d'enemy dans la salle\n";
+        output += (this.personnages[1] != null)?this.personnages[1]+"\n":"Il n'y a pas d'enemy dans la salle\n";
         return output;
     }
 

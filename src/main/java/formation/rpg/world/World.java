@@ -38,18 +38,10 @@ public class World {
         this.getNeighbors(room)[direction].in(room.out());
         this.createNeighbors(this.getNeighbors(room)[direction].position);
         switch (direction) {
-            case 0:
-                this.playerPosition = this.playerPosition.getNorth();
-                break;
-            case 1:
-                this.playerPosition = this.playerPosition.getEst();
-                break;
-            case 2:
-                this.playerPosition = this.playerPosition.getSouth();
-                break;
-            case 3:
-                this.playerPosition = this.playerPosition.getWest();
-                break;
+            case 0 -> this.playerPosition = this.playerPosition.getNorth();
+            case 1 -> this.playerPosition = this.playerPosition.getEst();
+            case 2 -> this.playerPosition = this.playerPosition.getSouth();
+            case 3 -> this.playerPosition = this.playerPosition.getWest();
         }
     }
 
@@ -61,10 +53,10 @@ public class World {
     public Room[] getNeighbors(Room room) {
         Room[] neighbors = new Room[4];
 
-        neighbors[0] = (this.world.containsKey(room.position.getNorth()))?this.world.get(room.position.getNorth()):null;
-        neighbors[1] = (this.world.containsKey(room.position.getEst()))?this.world.get(room.position.getEst()):null;
-        neighbors[2] = (this.world.containsKey(room.position.getSouth()))?this.world.get(room.position.getSouth()):null;
-        neighbors[3] = (this.world.containsKey(room.position.getWest()))?this.world.get(room.position.getWest()):null;
+        neighbors[0] = this.world.getOrDefault(room.position.getNorth(), null);
+        neighbors[1] = this.world.getOrDefault(room.position.getEst(), null);
+        neighbors[2] = this.world.getOrDefault(room.position.getSouth(), null);
+        neighbors[3] = this.world.getOrDefault(room.position.getWest(), null);
 
         return neighbors;
     }

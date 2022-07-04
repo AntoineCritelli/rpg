@@ -9,7 +9,7 @@ import formation.rpg.world.World;
  */
 public interface Action {
 
-    public void doo(World world);
+    void doo(World world);
 
-    public void dooInterface(World world, MainController controller);
+    void dooInterface(World world, MainController controller);
 }

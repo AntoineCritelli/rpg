@@ -9,6 +9,6 @@ public interface IConsomable {
      * consome un objet 
      * @param target le personnage qui consome l'item
      */
-    public void consume(Personnage target) throws NoSuchItemInventoryException;
+    void consume(Personnage target) throws NoSuchItemInventoryException;
 
 }

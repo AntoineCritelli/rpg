@@ -46,7 +46,7 @@ public class Personnage {
      */
     public int frapper() {
         int degat = this.getEquippedWeapon().getDegat();
-        if (Math.random() < this.getEquippedWeapon().getCc()+this.getForce()/100)
+        if (Math.random() < this.getEquippedWeapon().getCc()+(this.getForce()/100.0f))
             degat *= 2;
         degat *= 1+this.getForce()/10;
 

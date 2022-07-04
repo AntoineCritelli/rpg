@@ -7,6 +7,9 @@ import formation.rpg.personnage.*;
 import formation.rpg.util.*;
 import formation.rpg.world.*;
 
+import java.util.Random;
+import java.util.random.RandomGenerator;
+
 public class App {
     
     public static void main(String[] args) {
@@ -30,10 +33,9 @@ public class App {
                 System.out.print(index++);
                 System.out.println(" : " + action.toString());
             }
-            int choix = Inputs.getInt();
-            actions[choix].doo(world);
+            actions[Inputs.getInt()].doo(world);
             System.out.println("-----------------------------------------------");
-        } while (true);
+        } while (world.getPlayer().getVie() > 0);
     }
     
 }

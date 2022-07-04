@@ -69,12 +69,12 @@ public class Inventaire {
         if (this.inventaire.length == 0)
             return "Votre inventaire est vide";
             
-        String output = " Inventaire :\n";
+        StringBuilder output = new StringBuilder(" Inventaire :\n");
         for (int i=0;i<this.inventaire.length;i++) {
             if (this.inventaire[i] != null)
-                output += (i) + " : " + this.inventaire[i].toString() + "\n";
+                output.append(i).append(" : ").append(this.inventaire[i].toString()).append("\n");
         }
-        return output;
+        return output.toString();
     }
 
     /**

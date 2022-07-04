@@ -4,8 +4,8 @@ package formation.rpg.util;
  * classe permetant de représenté un vecteur2 
  */
 public class Vector2 {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     /**
      * crée un vecteur2 de coordonnées (0,0)
@@ -37,9 +37,8 @@ public class Vector2 {
      */
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Vector2))
+        if (!(obj instanceof Vector2 v))
             return false;
-        Vector2 v = (Vector2) obj;
         return this.getX()==v.getX() && this.getY()==v.getY();
     }
 

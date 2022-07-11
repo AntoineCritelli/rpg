@@ -7,9 +7,6 @@ import formation.rpg.personnage.*;
 import formation.rpg.util.*;
 import formation.rpg.world.*;
 
-import java.util.Random;
-import java.util.random.RandomGenerator;
-
 public class App {
     
     public static void main(String[] args) {

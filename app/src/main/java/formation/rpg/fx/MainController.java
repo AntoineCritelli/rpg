@@ -17,7 +17,6 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import org.controlsfx.control.spreadsheet.Grid;
 
 public class MainController {
     private World world;
